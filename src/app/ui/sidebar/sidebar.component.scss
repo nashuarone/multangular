@@ -1,0 +1,24 @@
+:host {
+    display: block;
+    padding: 20px 12px;
+}
+
+.menu-list {
+    display: grid;
+    gap: 8px;
+    list-style: none;
+}
+
+.menu-item {
+    padding: 16px 12px;
+    background: none;
+    border: none;
+    width: 100%;
+    color: wheat;
+    cursor: pointer;
+
+    &:hover,
+    &:focus-visible {
+        background: var(--dark-hover-color);
+    }
+}

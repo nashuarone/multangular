@@ -1,1 +1,124 @@
-/* You can add global styles to this file, and also import other style files */
+@import "fonts";
+
+:root {
+    --dark-color: #000;
+    --light-color: #fff;
+    --light-grey-color: #ccc;
+    --primary-color: #ae7aff;
+    --dark-hover-color: #161616;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--dark-color);
+    color: var(--light-color);
+    background-image: url('/assets/images/backgroundXL.png');
+}
+
+.skill-tag {
+    padding: 0 8px;
+    border: 1px solid var(--light-color);
+    border-radius: 4px;
+    display: inline;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 24px;
+    height: 24px;
+}
+
+.btn {
+    width: 100%;
+    border: none;
+    background: var(--primary-color);
+    color: var(--dark-color);
+    padding: 4px 8px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.h1 {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 800;
+}
+
+.h6 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.login-head {
+    margin-bottom: 40px;
+}
+
+.login-control {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+    font-style: 12px;
+    line-height: 16px;
+}
+
+.login-input {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    border: 1px solid var(--light-color);
+    border-radius: 4px;
+    padding: 12px 20px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    background: rgba(var(--dark-color), 0.8);
+    color: var(--light-color);
+}
+
+.login-logo {
+    margin: 0 auto;
+    transform: scale(9);
+}
+
+.login-logo:hover {
+    animation: heartbeat .25s 2 ease-in-out;
+}
+
+@keyframes heartbeat {
+	to { transform: scale(9.3); }
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-eye-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 12px;
+    margin-top: 2px;
+    color: var(--light-grey-color);
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.password-eye-btn.active {
+    color: var(--primary-color);
+}
